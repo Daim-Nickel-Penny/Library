@@ -1,3 +1,7 @@
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Library {
@@ -26,6 +30,16 @@ public class Library {
         }
         else
             fine = 10000;
+       String date1=Integer.toString(y2)+"-"+Integer.toString(m2)+"-"+Integer.toString(d2);
+       String date2=Integer.toString(y1)+"-"+Integer.toString(m1)+"-"+Integer.toString(d1);
+//        System.out.println(date1);
+//        System.out.println(date2);
+//        LocalDate dateBefore = LocalDate.parse(date1);
+//        LocalDate dateAfter = LocalDate.parse(date2);
+//        long noOfDaysBetween = ChronoUnit.DAYS.between(dateBefore, dateAfter);
+//        System.out.println(noOfDaysBetween);
         System.out.println("Your Fine after Calculation is $"+fine);
+
+
     }
 }
