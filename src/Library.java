@@ -39,6 +39,18 @@ public class Library {
 //        long noOfDaysBetween = ChronoUnit.DAYS.between(dateBefore, dateAfter);
 //        System.out.println(noOfDaysBetween);
         System.out.println("Your Fine after Calculation is $"+fine);
+	SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
+        String dbs = "31 01 2019";
+        String das = "02 02 2020";
+        try {
+            Date dateBefore = myFormat.parse(dbs);
+            Date dateAfter = myFormat.parse(das);
+            long difference = dateAfter.getTime() - dateBefore.getTime();
+            float days = (difference / (1000*60*60*24));
+            System.out.println("Number of Days between dates: "+days);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
     }
